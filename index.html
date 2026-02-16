@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <!-- Bootstrap CSS for grid system and RTL support -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,15 +13,28 @@
   <!-- Header / Hero Section -->
   <header>
     <div>
+      <!-- Language Switcher for testing RTL functionality -->
+      <div style="position: absolute; top: 10px; right: 10px; z-index: 1000;">
+        <select id="languageSwitcher" class="form-select form-select-sm" style="width: auto; background-color: rgba(255,255,255,0.9);" aria-label="Select language">
+          <option value="en">English (LTR)</option>
+          <option value="ar">العربية (Arabic RTL)</option>
+          <option value="he">עברית (Hebrew RTL)</option>
+          <option value="ur">اردو (Urdu RTL)</option>
+          <option value="fa">فارسی (Persian RTL)</option>
+          <option value="es">Español (Spanish LTR)</option>
+          <option value="fr">Français (French LTR)</option>
+        </select>
+      </div>
+      
       <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" class="header-logo"/>
+      <img src="img/intel-header-logo.svg" alt="Intel Corporation company logo" class="header-logo"/>
       <!-- Main Heading -->
-      <h1>
+      <h1 data-i18n="hero-title">
         Sustainability Through the Ages
       </h1>
 
       <!-- Subheading / Description -->
-      <p>
+      <p data-i18n="hero-description">
         Explore Intel's journey through time, discovering how our commitment
         to innovation has shaped a more sustainable future for technology 
         and our planet.
@@ -35,12 +50,12 @@
       <!-- Card content wrapper lets this area scroll -->
       <div class="card-content">
         <h2>1968</h2>
-        <h3>Intel Founded</h3>
+        <h3 data-i18n="card1-title">Intel Founded</h3>
         <!-- Add image -->
-        <img src="img/1968 Intel founded.jpg" alt="Intel Founders" />
+        <img src="img/1968 Intel founded.jpg" alt="Historical photo of Intel founders Robert Noyce and Gordon Moore in 1968" />
       </div>
       <div class="card-overlay">
-        <p>
+        <p data-i18n="card1-text">
           Robert Noyce and Gordon Moore rename the newly formed company 
           NM Electronics to Intel Corporation, laying the foundation for 
           decades of technological innovation.
@@ -52,12 +67,12 @@
     <div class="timeline-card" tabindex="0">
       <div class="card-content">
         <h2>1971</h2>
-        <h3>First Microprocessor</h3>
+        <h3 data-i18n="card2-title">First Microprocessor</h3>
         <!-- Add image -->
-        <img src="img/1971 Intel First Microprocessor.jpg" alt="First Microprocessor" />
+        <img src="img/1971 Intel First Microprocessor.jpg" alt="Intel 4004 microprocessor chip from 1971, the world's first commercial microprocessor" />
       </div>
       <div class="card-overlay">
-        <p>
+        <p data-i18n="card2-text">
           Intel debuts the 4004, the world's first commercial microprocessor, 
           igniting the microprocessor revolution and propelling the future 
           of computing devices.
@@ -69,12 +84,12 @@
     <div class="timeline-card" tabindex="0">
       <div class="card-content">
         <h2>1978</h2>
-        <h3>8086 Processor</h3>
+        <h3 data-i18n="card3-title">8086 Processor</h3>
         <!-- Add image -->
-        <img src="img/1978 8086 Processor.jpg" alt="8086 Processor" />
+        <img src="img/1978 8086 Processor.jpg" alt="Intel 8086 processor chip that established the x86 architecture" />
       </div>
       <div class="card-overlay">
-        <p>
+        <p data-i18n="card3-text">
           Launch of the 8086 processor, establishing the x86 architecture 
           that drives countless PCs and servers in the modern era.
         </p>
@@ -85,12 +100,12 @@
     <div class="timeline-card" tabindex="0">
       <div class="card-content">
         <h2>1985</h2>
-        <h3>386 Processor</h3>
+        <h3 data-i18n="card4-title">386 Processor</h3>
         <!-- Add image -->
-        <img src="img/1985 386 Processor.jpg" alt="386 Processor" />
+        <img src="img/1985 386 Processor.jpg" alt="Intel 386 processor with 32-bit architecture from 1985" />
       </div>
       <div class="card-overlay">
-        <p>
+        <p data-i18n="card4-text">
           Intel introduces the 386 processor with 32-bit architecture, 
           ushering in a new era of performance and multitasking for 
           personal computers.
@@ -102,12 +117,12 @@
     <div class="timeline-card" tabindex="0">
       <div class="card-content">
         <h2>2006</h2>
-        <h3>Peak GHG Emissions</h3>
+        <h3 data-i18n="card5-title">Peak GHG Emissions</h3>
         <!-- Add image -->
-        <img src="img/2006 Peak GHG Emissions.jpg" alt="GHG Emissions" />
+        <img src="img/2006 Peak GHG Emissions.jpg" alt="Infographic showing Intel's peak greenhouse gas emissions in 2006" />
       </div>
       <div class="card-overlay">
-        <p>
+        <p data-i18n="card5-text">
           This year marks Intel's highest annual greenhouse gas emissions 
           for operations. Over subsequent years, Intel invests heavily in 
           chemical abatement, renewable energy, and energy-efficient 
@@ -120,12 +135,12 @@
     <div class="timeline-card" tabindex="0">
       <div class="card-content">
         <h2>2020</h2>
-        <h3>RISE Strategy</h3>
+        <h3 data-i18n="card6-title">RISE Strategy</h3>
         <!-- Add image -->
-        <img src="img/2020 RISE Strategy.jpg" alt="RISE Strategy" />
+        <img src="img/2020 RISE Strategy.jpg" alt="Intel RISE strategy graphic showing Responsible, Inclusive, Sustainable, and Enabling pillars" />
       </div>
       <div class="card-overlay">
-        <p>
+        <p data-i18n="card6-text">
           Intel launches its RISE (Responsible, Inclusive, Sustainable, 
           Enabling) strategy and 2030 goals, aiming to drive industry-wide 
           progress on climate action, water stewardship, and waste reduction.
@@ -137,12 +152,12 @@
     <div class="timeline-card" tabindex="0">
       <div class="card-content">
         <h2>2022</h2>
-        <h3>Net-Zero By 2040</h3>
+        <h3 data-i18n="card7-title">Net-Zero By 2040</h3>
         <!-- Add image -->
-        <img src="img/2022 Net-Zero By 2040.jpg" alt="Net-Zero by 2040" />
+        <img src="img/2022 Net-Zero By 2040.jpg" alt="Visual representation of Intel's net-zero greenhouse gas emissions commitment for 2040" />
       </div>
       <div class="card-overlay">
-        <p>
+        <p data-i18n="card7-text">
           Intel announces its commitment to achieve net-zero greenhouse 
           gas emissions (Scope 1 and 2) across its global operations 
           by 2040, building on years of environmental initiatives.
@@ -154,12 +169,12 @@
     <div class="timeline-card" tabindex="0">
       <div class="card-content">
         <h2>2023</h2>
-        <h3>Renewable Electricity</h3>
+        <h3 data-i18n="card8-title">Renewable Electricity</h3>
         <!-- Add image -->
-        <img src="img/2023 Renewable Electricity.jpg" alt="Renewable Electricity" />
+        <img src="img/2023 Renewable Electricity.jpg" alt="Renewable energy sources powering Intel facilities, achieving 99% renewable electricity" />
       </div>
       <div class="card-overlay">
-        <p>
+        <p data-i18n="card8-text">
           The company achieves 99% renewable electricity usage worldwide, 
           helping to drastically lower carbon emissions and driving progress 
           toward Intel's long-term sustainability goals.
@@ -171,12 +186,12 @@
     <div class="timeline-card" tabindex="0">
       <div class="card-content">
         <h2>2024</h2>
-        <h3>Sustainability Summit</h3>
+        <h3 data-i18n="card9-title">Sustainability Summit</h3>
         <!-- Add image -->
-        <img src="img/2024 Sustainability Summit.jpg" alt="Sustainability Summit" />
+        <img src="img/2024 Sustainability Summit.jpg" alt="Intel Sustainability Summit conference with industry leaders discussing semiconductor sustainability" />
       </div>
       <div class="card-overlay">
-        <p>
+        <p data-i18n="card9-text">
           Intel hosts its first Sustainability Summit, uniting suppliers, 
           government officials, and industry leaders to collaborate on 
           next-generation sustainable semiconductor manufacturing.
@@ -184,6 +199,430 @@
       </div>
     </div>
   </section>
-  <p class="timeline-hint">Scroll to view timeline | Hover over cards to learn more!</p>
+  <p class="timeline-hint" data-i18n="timeline-hint">Scroll to view timeline | Hover over cards to learn more!</p>
+  
+  <!-- 3-Column Content Section with Bootstrap Grid -->
+  <section class="container my-5">
+    <!-- Container: centers content and adds responsive padding -->
+    <!-- my-5: adds margin (spacing) on top and bottom -->
+    
+    <div class="row g-4">
+      <!-- Row: creates a horizontal group for columns -->
+      <!-- g-4: adds spacing (gutters) between columns -->
+      
+      <!-- Column 1: Takes up 4 units out of 12 (one-third) on medium+ screens -->
+      <div class="col-md-4">
+        <h2 data-i18n="section1-title">RISE Strategy <img src="img/bar-chart-steps.svg" alt="" class="title-icon" /></h2>
+        <p data-i18n="section1-text">
+          Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+          Intel sets ambitious 2030 goals, including driving industry-wide 
+          progress on climate action, water stewardship, and waste reduction.
+        </p>
+        <!-- btn: Bootstrap button styling -->
+        <!-- btn-primary: primary color button -->
+        <!-- data-bs-toggle="modal": tells Bootstrap this button opens a modal -->
+        <!-- data-bs-target: specifies which modal to open (by ID) -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#riseModal" data-i18n="learn-more">
+          Learn More
+        </button>
+      </div>
+
+      <!-- Column 2: Also takes up 4 units (one-third) -->
+      <div class="col-md-4">
+        <h2 data-i18n="section2-title">Commitment</h2>
+        <p data-i18n="section2-text">
+          In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+          (Scope 1 and 2) by 2040. This commitment builds on decades of 
+          environmental initiatives and partnerships across the semiconductor 
+          industry.
+        </p>
+        <!-- Button triggers the Net-Zero Commitment modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#commitmentModal" data-i18n="learn-more">
+          Learn More
+        </button>
+      </div>
+
+      <!-- Column 3: Also takes up 4 units (one-third) -->
+      <div class="col-md-4">
+        <h2 data-i18n="section3-title">Water &amp; Waste</h2>
+        <p data-i18n="section3-text">
+          Intel conserves billions of gallons of water annually and 
+          collaborates with local communities to restore watersheds.
+          Intel also upcycles and recycles materials to reduce waste and 
+          advance a circular economy.
+        </p>
+        <!-- Button triggers the Water & Waste modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#waterModal" data-i18n="learn-more">
+          Learn More
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Subscription Form Section -->
+  <section class="container my-5 py-4" aria-labelledby="newsletter-heading">
+    <!-- container: centers content with responsive padding -->
+    <!-- my-5: adds vertical margin spacing -->
+    <!-- py-4: adds padding top and bottom -->
+    <!-- aria-labelledby: connects section to heading for screen readers -->
+    
+    <h2 id="newsletter-heading" class="text-center mb-4" data-i18n="newsletter-title">Subscribe to our Newsletter</h2>
+    <!-- text-center: centers the heading -->
+    <!-- mb-4: adds margin bottom for spacing -->
+    <!-- id: allows aria-labelledby connection -->
+    
+    <div class="row justify-content-center">
+      <!-- row: creates flex container for columns -->
+      <!-- justify-content-center: centers the column horizontally -->
+      
+      <div class="col-md-6">
+        <!-- col-md-6: takes up half width (6 out of 12 units) on medium+ screens -->
+        <!-- This makes the form narrower and more focused -->
+        
+        <p class="text-center mb-4" data-i18n="newsletter-description">
+          Get the latest updates on Intel's sustainability initiatives and innovations.
+        </p>
+        <!-- Describes what the newsletter is about for better user understanding -->
+        
+        <form action="#" method="post" novalidate>
+          <!-- action: form submission URL (placeholder) -->
+          <!-- method: POST for form data -->
+          <!-- novalidate: allows custom validation styling -->
+          
+          <fieldset>
+            <!-- fieldset: groups related form fields for accessibility -->
+            <legend class="visually-hidden">Newsletter subscription information</legend>
+            <!-- legend: describes the fieldset, visually hidden but available to screen readers -->
+          
+            <!-- Name Input Field -->
+            <div class="mb-3">
+              <!-- mb-3: adds margin bottom between form fields -->
+              
+              <label for="subscriberName" class="form-label">
+                <span data-i18n="form-name">Name</span> <span class="text-danger" aria-hidden="true">*</span>
+              </label>
+              <!-- form-label: Bootstrap styling for labels -->
+              <!-- for attribute connects label to input -->
+              <!-- text-danger: red asterisk for required field -->
+              <!-- aria-hidden: hides asterisk from screen readers (aria-required used instead) -->
+              
+              <input 
+                type="text" 
+                class="form-control" 
+                id="subscriberName"
+                name="name"
+                placeholder="Enter your name"
+                data-i18n="form-name-placeholder"
+                required
+                aria-required="true"
+                autocomplete="name"
+                maxlength="100"
+                aria-describedby="nameHelp"
+              />
+              <!-- form-control: Bootstrap class that styles the input field -->
+              <!-- name: form field name for submission -->
+              <!-- required: makes field mandatory -->
+              <!-- aria-required: announces requirement to screen readers -->
+              <!-- autocomplete: helps browsers auto-fill the field -->
+              <!-- maxlength: practical character limit -->
+              <!-- aria-describedby: connects to helper text -->
+              
+              <small id="nameHelp" class="form-text text-muted visually-hidden">
+                Enter your full name
+              </small>
+              <!-- Helper text for screen readers -->
+            </div>
+
+            <!-- Email Input Field -->
+            <div class="mb-3">
+              <label for="subscriberEmail" class="form-label">
+                <span data-i18n="form-email">Email address</span> <span class="text-danger" aria-hidden="true">*</span>
+              </label>
+              
+              <input 
+                type="email" 
+                class="form-control" 
+                id="subscriberEmail"
+                name="email"
+                placeholder="example@email.com"
+                data-i18n="form-email-placeholder"
+                required
+                aria-required="true"
+                autocomplete="email"
+                maxlength="100"
+                aria-describedby="emailHelp"
+              />
+              <!-- type="email": validates email format -->
+              <!-- required: makes this field mandatory -->
+              <!-- aria-required: announces requirement to screen readers -->
+              <!-- autocomplete: helps browsers auto-fill email -->
+              <!-- maxlength: practical character limit -->
+              <!-- aria-describedby: connects to helper text -->
+              
+              <small id="emailHelp" class="form-text text-muted" data-i18n="form-privacy">
+                We'll never share your email with anyone else.
+              </small>
+              <!-- Privacy reassurance text, visible to all users -->
+            </div>
+
+          </fieldset>
+
+          <!-- Submit Button -->
+          <div class="d-grid">
+            <!-- d-grid: makes button full width of its container -->
+            
+            <button type="submit" class="btn btn-primary btn-lg" aria-label="Subscribe to Intel sustainability newsletter" data-i18n="form-subscribe">
+              Subscribe
+            </button>
+            <!-- btn: base button class -->
+            <!-- btn-primary: primary color styling -->
+            <!-- btn-lg: makes button larger for easier clicking -->
+            <!-- aria-label: provides clear description for screen readers -->
+          </div>
+          
+          <!-- Form Status Messages (hidden by default) -->
+          <div id="formStatus" class="mt-3" role="status" aria-live="polite" aria-atomic="true">
+            <!-- role="status": indicates status message region -->
+            <!-- aria-live="polite": announces changes to screen readers -->
+            <!-- aria-atomic="true": reads entire message when updated -->
+            <!-- This div can be populated with success/error messages via JavaScript -->
+          </div>
+          
+        </form>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap Modals for "Learn More" Buttons -->
+  <!-- Modals are popup dialogs that appear on top of the page -->
+  
+  <!-- Modal 1: RISE Strategy Details -->
+  <div class="modal fade" id="riseModal" tabindex="-1" aria-labelledby="riseModalLabel" aria-hidden="true">
+    <!-- modal: Bootstrap modal component -->
+    <!-- fade: adds a fade-in animation -->
+    <!-- id: matches the data-bs-target from the button -->
+    <!-- tabindex="-1": allows keyboard focus -->
+    <!-- aria-labelledby: connects to modal title for screen readers -->
+    <!-- aria-hidden="true": hides from screen readers when closed -->
+    
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <!-- modal-dialog: container for modal content -->
+      <!-- modal-dialog-centered: centers modal vertically on screen -->
+      <!-- modal-dialog-scrollable: allows scrolling if content is long -->
+      
+      <div class="modal-content">
+        <!-- modal-content: holds the actual content of the modal -->
+        
+        <!-- Modal Header with Title and Close Button -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="riseModalLabel" data-i18n="modal-rise-title">Intel RISE Strategy</h5>
+          <!-- modal-title: styles the modal heading -->
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <!-- btn-close: X button to close the modal -->
+          <!-- data-bs-dismiss="modal": closes the modal when clicked -->
+        </div>
+        
+        <!-- Modal Body with Detailed Content -->
+        <div class="modal-body">
+          <h6 class="fw-bold" data-i18n="modal-rise-responsible">Responsible</h6>
+          <p data-i18n="modal-rise-responsible-text">
+            Intel takes responsibility for its global impact by setting science-based targets 
+            for greenhouse gas reduction, investing in renewable energy, and working to reduce 
+            their carbon footprint across all operations.
+          </p>
+          
+          <h6 class="fw-bold mt-3" data-i18n="modal-rise-inclusive">Inclusive</h6>
+          <p data-i18n="modal-rise-inclusive-text">
+            Creating a more inclusive workplace and technology industry through diverse hiring 
+            practices, equal pay initiatives, and programs that support underrepresented groups 
+            in STEM fields.
+          </p>
+          
+          <h6 class="fw-bold mt-3" data-i18n="modal-rise-sustainable">Sustainable</h6>
+          <p data-i18n="modal-rise-sustainable-text">
+            Building products and processes that minimize environmental impact through water 
+            conservation, waste reduction, circular economy practices, and sustainable 
+            manufacturing techniques.
+          </p>
+          
+          <h6 class="fw-bold mt-3" data-i18n="modal-rise-enabling">Enabling</h6>
+          <p data-i18n="modal-rise-enabling-text">
+            Using technology as a force for good by developing innovations that help solve 
+            global challenges, from climate modeling to accessible computing for people with 
+            disabilities.
+          </p>
+          
+          <div class="alert alert-info mt-3" role="alert">
+            <!-- alert: Bootstrap alert component for highlighted information -->
+            <strong data-i18n="modal-rise-goals-label">2030 Goals:</strong> <span data-i18n="modal-rise-goals-text">Intel aims to achieve net positive water use, zero waste to landfill, and 100% renewable electricity across global operations.</span>
+          </div>
+        </div>
+        
+        <!-- Modal Footer with Action Buttons -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="modal-close">Close</button>
+          <!-- btn-secondary: secondary button styling (gray) -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Net-Zero Commitment Details -->
+  <div class="modal fade" id="commitmentModal" tabindex="-1" aria-labelledby="commitmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h5 class="modal-title" id="commitmentModalLabel" data-i18n="modal-commitment-title">Net-Zero by 2040 Commitment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+          <h6 class="fw-bold" data-i18n="modal-commitment-heading">The Commitment</h6>
+          <p data-i18n="modal-commitment-text">
+            In 2022, Intel announced its ambitious goal to achieve net-zero greenhouse gas 
+            emissions across its global operations (Scope 1 and 2) by 2040. This commitment 
+            represents a comprehensive approach to decarbonization.
+          </p>
+          
+          <h6 class="fw-bold mt-3" data-i18n="modal-commitment-strategies">Key Strategies</h6>
+          <ul>
+            <li><strong data-i18n="modal-commitment-efficiency">Energy Efficiency:</strong> <span data-i18n="modal-commitment-efficiency-text">Implementing advanced technologies to reduce energy consumption in manufacturing and facilities</span></li>
+            <li><strong data-i18n="modal-commitment-renewable">Renewable Energy:</strong> <span data-i18n="modal-commitment-renewable-text">Transitioning to 100% renewable electricity worldwide</span></li>
+            <li><strong data-i18n="modal-commitment-chemistry">Green Chemistry:</strong> <span data-i18n="modal-commitment-chemistry-text">Developing and using environmentally friendly chemicals in production</span></li>
+            <li><strong data-i18n="modal-commitment-carbon">Carbon Capture:</strong> <span data-i18n="modal-commitment-carbon-text">Investing in carbon abatement technologies</span></li>
+          </ul>
+          
+          <h6 class="fw-bold mt-3" data-i18n="modal-commitment-tracking">Progress Tracking</h6>
+          <p data-i18n="modal-commitment-tracking-text">
+            Intel publishes annual sustainability reports with transparent metrics on emissions 
+            reduction, renewable energy adoption, and progress toward 2040 goals. The company 
+            works with third-party auditors to verify its environmental data.
+          </p>
+          
+          <div class="alert alert-success mt-3" role="alert">
+            <strong data-i18n="modal-commitment-milestone">Milestone:</strong> <span data-i18n="modal-commitment-milestone-text">By 2023, Intel achieved 99% renewable electricity usage globally, a major step toward the 2040 net-zero goal.</span>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="modal-close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Water & Waste Details -->
+  <div class="modal fade" id="waterModal" tabindex="-1" aria-labelledby="waterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h5 class="modal-title" id="waterModalLabel" data-i18n="modal-water-title">Water Conservation & Waste Reduction</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+          <h6 class="fw-bold" data-i18n="modal-water-stewardship">Water Stewardship</h6>
+          <p data-i18n="modal-water-stewardship-text">
+            Intel's water conservation efforts focus on three key areas: reducing water use, 
+            restoring watersheds, and ensuring access to safe water in communities where 
+            Intel operates.
+          </p>
+          
+          <ul>
+            <li><strong data-i18n="modal-water-conservation">Conservation:</strong> <span data-i18n="modal-water-conservation-text">Advanced water recycling systems that reuse water multiple times in manufacturing</span></li>
+            <li><strong data-i18n="modal-water-restoration">Restoration:</strong> <span data-i18n="modal-water-restoration-text">Partnering with local organizations to restore and protect watersheds</span></li>
+            <li><strong data-i18n="modal-water-goal">Net Positive Goal:</strong> <span data-i18n="modal-water-goal-text">Returning more water to communities than Intel uses by 2030</span></li>
+          </ul>
+          
+          <h6 class="fw-bold mt-3" data-i18n="modal-water-circular">Circular Economy & Waste</h6>
+          <p data-i18n="modal-water-circular-text">
+            Intel implements circular economy principles to minimize waste and maximize 
+            resource efficiency throughout the product lifecycle.
+          </p>
+          
+          <ul>
+            <li><strong data-i18n="modal-water-zero">Zero Waste:</strong> <span data-i18n="modal-water-zero-text">90% of hazardous and non-hazardous waste diverted from landfills</span></li>
+            <li><strong data-i18n="modal-water-material">Material Recovery:</strong> <span data-i18n="modal-water-material-text">Recycling precious metals and materials from manufacturing</span></li>
+            <li><strong data-i18n="modal-water-product">Product Design:</strong> <span data-i18n="modal-water-product-text">Creating products that are easier to recycle and upgrade</span></li>
+            <li><strong data-i18n="modal-water-packaging">Packaging:</strong> <span data-i18n="modal-water-packaging-text">Using sustainable packaging materials and reducing waste</span></li>
+          </ul>
+          
+          <div class="alert alert-warning mt-3" role="alert">
+            <strong data-i18n="modal-water-impact">Impact:</strong> <span data-i18n="modal-water-impact-text">Intel conserves billions of gallons of water annually and has restored over 4 billion gallons of water through watershed restoration projects.</span>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="modal-close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <!-- bg-dark: dark background color -->
+    <!-- text-white: white text color -->
+    <!-- py-4: padding top and bottom -->
+    <!-- mt-5: margin top for spacing from content above -->
+    
+    <div class="container-fluid px-4">
+      <!-- container-fluid: full width with responsive padding -->
+      <!-- px-4: adds left and right padding -->
+      
+      <div class="row">
+        <!-- row: creates flex container for footer columns -->
+        
+        <!-- Copyright Section (left side) -->
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <!-- col-md-6: takes half width on medium+ screens -->
+          <!-- text-center: centers text on small screens -->
+          <!-- text-md-start: aligns text to start on medium+ screens -->
+          <!-- mb-3: adds bottom margin on small screens -->
+          <!-- mb-md-0: removes bottom margin on medium+ screens -->
+          
+          <p class="mb-0" data-i18n="footer-copyright">
+            <!-- mb-0: removes default paragraph margin -->
+            &copy; 2026 Intel Corporation. All rights reserved.
+          </p>
+        </div>
+
+        <!-- Navigation Links (right side) -->
+        <div class="col-md-6 text-center text-md-end">
+          <!-- col-md-6: takes half width on medium+ screens -->
+          <!-- text-center: centers links on small screens -->
+          <!-- text-md-end: aligns links to end on medium+ screens -->
+          
+          <a href="#" class="text-white text-decoration-none me-3" data-i18n="footer-privacy">Privacy Policy</a>
+          <!-- text-white: keeps link white -->
+          <!-- text-decoration-none: removes underline -->
+          <!-- me-3: adds right margin spacing -->
+          
+          <a href="#" class="text-white text-decoration-none me-3" data-i18n="footer-terms">Terms of Use</a>
+          
+          <a href="#" class="text-white text-decoration-none" data-i18n="footer-contact">Contact</a>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript Bundle (includes Popper for modals) -->
+  <!-- This script is required for interactive Bootstrap components like modals, dropdowns, etc. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Translation System -->
+  <!-- This script contains all translations for different languages -->
+  <script src="translations.js"></script>
+
+  <!-- RTL Auto-Detection Script -->
+  <!-- This script automatically detects language changes and applies RTL layout -->
+  <script src="rtl-detector.js"></script>
+
 </body>
 </html>

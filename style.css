@@ -31,8 +31,8 @@ body {
     font-family: "Times", "Times New Roman", "Georgia", serif;
     margin: 0 auto;
     padding: 0;
-    background-color: #0061b0;
-    background-image: linear-gradient(135deg, #1b73c8 0%, #0061b0 60%, #004f8e 100%);
+    background-color: #00C7FD;
+    background-image: linear-gradient(135deg, #1b73c8 0%, #00C7FD 60%, #004f8e 100%);
     max-width: 1200px;
 }
 
@@ -108,8 +108,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(173, 216, 230, 0.75); /* Light blue with fade */
-    color: #0b2a3a;
+    background-color: rgba(173, 216, 230, 0.95); /* Light blue with higher opacity for better contrast */
+    color: #000000; /* Pure black for maximum contrast */
     display: flex;
     align-items: center; /* Center text vertically */
     justify-content: center; /* Center text horizontally */
@@ -126,12 +126,13 @@ body {
 
 .card-overlay p {
     font-size: 15px;
-    line-height: 1.3;
+    line-height: 1.4;
     margin: 0;
     word-break: break-word;
     max-height: 100%;
     overflow-y: auto; /* Scroll long text while centered */
     padding: 0 2px;
+    font-weight: 500; /* Slightly bolder for better readability */
 }
 
 .timeline-card:hover .card-overlay,
@@ -156,6 +157,10 @@ body {
   font-family: "Times", "Times New Roman", "Georgia", serif;
     text-align: center;
     margin-top: 20px;
+    /* Improve color contrast for accessibility on blue background */
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 /* Responsive design for smaller screens */
 @media (max-width: 1024px) {
@@ -201,3 +206,280 @@ body {
         margin: 10px 0;
     }
 }
+
+/* Make footer extend full width beyond body's max-width constraint */
+footer {
+    /* Use relative positioning to break out of parent's width */
+    position: relative;
+    /* Calculate offset: 50% of viewport minus 50% of body's max-width */
+    left: 50%;
+    right: 50%;
+    /* Use viewport width to span full screen */
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+}
+
+/* Ensure Bootstrap sections have good contrast on the blue background */
+section.container {
+    background-color: rgba(255, 255, 255, 0.95); /* White background for content sections */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure headings in Bootstrap sections have good contrast */
+section.container h2,
+section.container h3,
+section.container p {
+    color: #000000;
+}
+
+/* Ensure form labels have sufficient contrast */
+.form-label {
+    color: #000000;
+    font-weight: 500;
+}
+
+/* Form accessibility improvements */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for required field indicator */
+.form-label .text-danger {
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+/* Focus styles for better keyboard navigation */
+.form-control:focus {
+    border-color: #0061b0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 97, 176, 0.25);
+    outline: 2px solid #0061b0;
+    outline-offset: 2px;
+}
+
+/* Button focus styles */
+.btn:focus,
+.btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 0.2rem rgba(0, 97, 176, 0.5);
+}
+
+/* Helper text styling */
+.form-text {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+/* Invalid field styling for better error indication */
+.form-control:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+}
+
+.form-control:valid:not(:placeholder-shown) {
+    border-color: #28a745;
+}
+
+/* Form status message area */
+#formStatus {
+    min-height: 20px;
+}
+
+#formStatus.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+#formStatus.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+/* RTL-specific styles */
+/* These styles are applied when the page is in RTL mode (right-to-left languages) */
+
+/* Adjust timeline scrolling for RTL */
+html[dir="rtl"] .timeline {
+    direction: ltr; /* Override RTL to maintain chronological left-to-right card order */
+    /* Timeline scrolls from left to right in chronological order */
+}
+
+/* Adjust card overlay text alignment for RTL */
+html[dir="rtl"] .card-overlay {
+    text-align: right;
+}
+
+html[dir="rtl"] .card-overlay p {
+    text-align: right;
+}
+
+/* Adjust timeline card text for RTL */
+html[dir="rtl"] .timeline-card h2,
+html[dir="rtl"] .timeline-card h3 {
+    text-align: center; /* Keep headings centered */
+}
+
+/* Adjust form field direction for RTL */
+html[dir="rtl"] .form-control {
+    text-align: right;
+    direction: rtl;
+}
+
+html[dir="rtl"] .form-label {
+    text-align: right;
+}
+
+/* Adjust button text for RTL */
+html[dir="rtl"] .btn {
+    direction: rtl;
+}
+
+/* Reverse margin utilities in RTL mode */
+html[dir="rtl"] .me-3 {
+    margin-right: 0 !important;
+    margin-left: 1rem !important;
+}
+
+/* Footer link spacing in RTL */
+html[dir="rtl"] footer a {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+html[dir="rtl"] footer a:not(:last-child) {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+/* Adjust header text alignment for RTL */
+html[dir="rtl"] header {
+    direction: rtl;
+}
+
+/* Smooth transition when switching between LTR and RTL */
+html {
+    transition: direction 0.3s ease;
+}
+
+.timeline,
+.form-control,
+.card-overlay {
+    transition: text-align 0.3s ease, direction 0.3s ease;
+}
+
+/* Bootstrap Modal Enhancements */
+/* Additional styling for modals to improve appearance */
+
+/* Modal backdrop with better contrast */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Modal content styling */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal header with better spacing */
+.modal-header {
+    background: linear-gradient(135deg, #0061b0 0%, #004f8e 100%);
+    color: white;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    padding: 1.5rem;
+}
+
+/* Modal title styling */
+.modal-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/* Close button contrast in modal header */
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+}
+
+.modal-header .btn-close:hover {
+    opacity: 0.8;
+}
+
+/* Modal body with better spacing and readability */
+.modal-body {
+    padding: 1.5rem;
+    line-height: 1.6;
+}
+
+.modal-body h6 {
+    color: #0061b0;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-body ul {
+    margin-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.modal-body ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Modal footer styling */
+.modal-footer {
+    border-top: 1px solid #e9ecef;
+    padding: 1rem 1.5rem;
+}
+
+/* Smooth animation for modal appearance */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+}
+
+/* RTL support for modals */
+html[dir="rtl"] .modal-body {
+    text-align: right;
+}
+
+html[dir="rtl"] .modal-body ul {
+    margin-right: 1.2rem;
+    margin-left: 0;
+}
+
+html[dir="rtl"] .modal-header {
+    direction: rtl;
+}
+
+html[dir="rtl"] .modal-footer {
+    direction: rtl;
+}
+
+/* Responsive modal adjustments */
+@media (max-width: 576px) {
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+    
+    .modal-title {
+        font-size: 1.25rem;
+    }
+}
+
+
